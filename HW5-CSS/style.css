@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #f5f6f0;
+    font-family: Arial, sans-serif;
+
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lessons {
+    width: 800px;
+    border: 2px solid #667077;
+    padding: 12px;
+    color: gray;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.lesson {
+    position: relative;
+    background-color: white;
+    min-height: 350px;
+
+    box-shadow:  7px 5px 12px #0002;
+}
+
+.lesson small {
+    display: inline-block;
+    position: absolute;
+    padding: 0px 25px 0 20px;
+    border-left: 2px solid blue;
+    line-height: 2;
+    color: #555;
+    font-size: 9px;
+    top: 20px;
+    letter-spacing: 1px;
+}
+
+.lesson h2 {
+    font-size: 17px;
+    top: 20px;
+    font-weight: normal;
+    color: #4b5258;
+
+    margin: 50px 22px;
+}
+
+.content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background-color: #fafbfd;
+    min-height: 115px;
+    padding: 14px 18px;
+}
+
+.content li {
+    font-size: 9px;
+    margin: 9px 0;
+}
+
+/* Tablet Responsive */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 20px 0;
+    }
+
+    .lessons {
+        width: 95%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .lesson {
+        min-height: 320px;
+    }
+
+    .lesson h2 {
+        font-size: 16px;
+        margin: 45px 15px;
+    }
+
+    .content {
+        padding: 12px;
+    }
+
+    .content li {
+        font-size: 9px;
+        overflow-wrap: anywhere;
+    }
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 480px) {
+    body {
+        padding: 15px 0;
+        align-items: flex-start;
+    }
+
+    .lessons {
+        width: 95%;
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .lesson {
+        min-height: 300px;
+    }
+
+    .lesson small {
+        padding: 0 15px;
+        font-size: 9px;
+    }
+
+    .lesson h2 {
+        font-size: 16px;
+        margin: 45px 15px;
+    }
+
+    .content {
+        min-height: 110px;
+        padding: 12px 15px;
+    }
+
+    .content li {
+        font-size: 10px;
+        margin: 8px 0;
+    }
+}

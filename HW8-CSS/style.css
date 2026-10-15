@@ -1,0 +1,276 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: #f5f5f0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #202733;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 20px;
+}
+
+.trust-section {
+  width: 100%;
+  max-width: 693px;
+  min-height: 354px;
+  background: #fff;
+  padding: 29px 54px 30px;
+}
+
+.trust-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 25px;
+}
+
+.trust-header h1 {
+  font-size: 27px;
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: -1.1px;
+  white-space: nowrap;
+}
+
+.trust-header p {
+  max-width: 225px;
+  text-align: center;
+  font-size: 10px;
+  line-height: 1.6;
+  color: #2529329c;
+}
+
+.trust-divider {
+  height: 1px;
+  background: #dedede;
+  margin-top: 30px;
+}
+
+.trust-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 29px;
+}
+
+.feature {
+  min-height: 145px;
+  padding: 15px 24px 10px;
+  border-right: 1px solid #dedede;
+}
+
+.feature:first-child {
+  padding-left: 24px;
+}
+
+.feature:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+
+.check-icon {
+  width: 25px;
+  height: 25px;
+  margin-bottom: 16px;
+  color: #ff9136;
+}
+
+.check-icon svg {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.feature p {
+  font-size: 12px;
+  line-height: 1.35;
+  font-weight: 400;
+  color: #111820;
+}
+
+.trust-action {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.trust-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  background: #7b8ba8;
+  color: #ffffffcd;
+  text-decoration: none;
+  font-size: 8px;
+  font-weight: 600;
+  padding: 8px 21px;
+  min-height: 24px;
+  border-radius: 2px;
+  transition: background 0.2s ease;
+}
+
+.trust-button:hover {
+  background: #657793;
+}
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+  body {
+    padding: 25px 15px;
+  }
+
+  .trust-section {
+    min-height: auto;
+    padding: 25px 30px;
+  }
+
+  .trust-header {
+    gap: 18px;
+  }
+
+  .trust-header h1 {
+    font-size: 24px;
+    white-space: normal;
+  }
+
+  .trust-header p {
+    max-width: 210px;
+    font-size: 10px;
+  }
+
+  .trust-features {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-top: 25px;
+  }
+
+  .feature {
+    padding: 12px 15px;
+  }
+
+  .feature:first-child {
+    padding-left: 10px;
+  }
+
+  .feature:last-child {
+    padding-right: 0;
+  }
+
+  .feature p {
+    font-size: 11px;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 600px) {
+  body {
+    padding: 15px 10px;
+    align-items: flex-start;
+  }
+
+  .trust-section {
+    width: 100%;
+    min-height: auto;
+    padding: 25px 18px;
+  }
+
+  .trust-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .trust-header h1 {
+    font-size: 24px;
+    line-height: 1.3;
+    letter-spacing: -0.5px;
+    white-space: normal;
+  }
+
+  .trust-header p {
+    max-width: 100%;
+    text-align: left;
+    font-size: 11px;
+  }
+
+  .trust-divider {
+    margin-top: 20px;
+  }
+
+  .trust-features {
+    grid-template-columns: 1fr;
+    margin-top: 15px;
+  }
+
+  .feature,
+  .feature:first-child,
+  .feature:last-child {
+    min-height: auto;
+    padding: 16px 5px;
+    border-right: none;
+    border-bottom: 1px solid #dedede;
+  }
+
+  .feature:last-child {
+    border-bottom: none;
+  }
+
+  .check-icon {
+    width: 23px;
+    height: 23px;
+    margin-bottom: 10px;
+  }
+
+  .feature p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .trust-action {
+    margin-top: 18px;
+  }
+
+  .trust-button {
+    font-size: 10px;
+    padding: 10px 22px;
+    min-height: 32px;
+  }
+}
+
+/* Small Mobile */
+@media screen and (max-width: 360px) {
+  body {
+    padding: 10px 7px;
+  }
+
+  .trust-section {
+    padding: 20px 13px;
+  }
+
+  .trust-header h1 {
+    font-size: 21px;
+  }
+
+  .trust-header p {
+    font-size: 10px;
+  }
+
+  .feature,
+  .feature:first-child,
+  .feature:last-child {
+    padding: 13px 3px;
+  }
+
+  .feature p {
+    font-size: 11px;
+  }
+}
